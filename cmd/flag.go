@@ -49,6 +49,11 @@ var (
 		Name:  "force, f",
 		Usage: "Force destruction without interactive prompts",
 	}
+	NoProviderFlag = cli.BoolFlag{
+		Name:   "no-provider",
+		Usage:  "No provider will be used",
+		Hidden: true,
+	}
 )
 
 // AWS flags
