@@ -2,7 +2,7 @@
 
 if [ -d "$HOME/.darknode" ] && [ -d "$HOME/.darknode/darknodes" ]; then
     cd $HOME/.darknode
-    curl -s 'https://darknode.republicprotocol.com/darknode.zip' > darknode.zip
+    curl -s 'https://releases.republicprotocol.com/darknode/darknode.zip' > darknode.zip
     unzip -o darknode.zip
 else
     echo "cannot find the darknode-cli"
@@ -16,9 +16,9 @@ cputype="$(uname -m)"
 
 # Download darknode-deployer
 if [ "$ostype" = 'Linux' -a "$cputype" = 'x86_64' ]; then
-    curl -s 'https://darknode.republicprotocol.com/darknode_linux_amd64' > ./bin/darknode
+    curl -s 'https://releases.republicprotocol.com/darknode/darknode_linux_amd64' > ./bin/darknode
 elif [ "$ostype" = 'Darwin' -a "$cputype" = 'x86_64' ]; then
-    curl -s 'https://darknode.republicprotocol.com/darknode_darwin_amd64' > ./bin/darknode
+    curl -s 'https://releases.republicprotocol.com/darknode/darknode_darwin_amd64' > ./bin/darknode
 else
    echo 'unsupported OS type or architecture'
    exit 1

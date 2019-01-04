@@ -14,7 +14,7 @@ fi
 mkdir -p $HOME/.darknode/darknodes
 mkdir -p $HOME/.darknode/bin
 cd $HOME/.darknode
-curl -s 'https://darknode.republicprotocol.com/darknode.zip' > darknode.zip
+curl -s 'https://releases.republicprotocol.com/darknode/darknode.zip' > darknode.zip
 unzip -o darknode.zip
 
 # get system information
@@ -24,10 +24,10 @@ cputype="$(uname -m)"
 # download darknode binary depending on the system and architecture
 if [ "$ostype" = 'Linux' -a "$cputype" = 'x86_64' ]; then
     TERRAFORM_URL='https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip'
-    curl -s 'https://darknode.republicprotocol.com/darknode_linux_amd64' > ./bin/darknode
+    curl -s 'https://releases.republicprotocol.com/darknode/darknode_linux_amd64' > ./bin/darknode
 elif [ "$ostype" = 'Darwin' -a "$cputype" = 'x86_64' ]; then
     TERRAFORM_URL='https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_darwin_amd64.zip'
-    curl -s 'https://darknode.republicprotocol.com/darknode_darwin_amd64' > ./bin/darknode
+    curl -s 'https://releases.republicprotocol.com/darknode/darknode_darwin_amd64' > ./bin/darknode
 else
    echo 'unsupported OS type or architecture'
    cd ..
