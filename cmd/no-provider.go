@@ -42,5 +42,5 @@ func deployToNoProvider(ctx *cli.Context) error {
 	defer file.Close()
 	fmt.Fprintf(file, "/ip4/0.0.0.0/tcp/18514/republic/%s", config.Address)
 
-	return outputURL(nodePath, key.Marshal())
+	return outputURL(nodePath, name, key.Marshal())
 }
